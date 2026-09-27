@@ -29,7 +29,8 @@ const base = process.env.TEST_URL || 'http://127.0.0.1:4173/';
             if(Math.abs(box.width-innerWidth)>1 || Math.abs(box.left)>1) issues.push('mobile width '+selector);
           }
           const image=p.querySelector('.illustration-leaf img');
-          if(image && (getComputedStyle(image).objectFit!=='cover' || getComputedStyle(image).transform!=='none')) issues.push('mobile image scale');
+          if(image && getComputedStyle(image).objectFit!=='cover') issues.push('mobile image fit');
+          if(image && getComputedStyle(image.closest('.illustration-leaf')).overflow!=='hidden') issues.push('image zoom escapes frame');
         }
         if(text && [...text.children].some(el=>el.scrollWidth>el.clientWidth+1)) issues.push('text horizontal overflow');
         if(text && getComputedStyle(text).overflowY!=='auto'){

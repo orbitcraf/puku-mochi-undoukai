@@ -427,6 +427,18 @@ img { display: block; max-width: 100%; -webkit-user-drag: none; user-select: non
   [data-page-id="arrival"] { --mobile-picture-position: 58% center; }
   [data-page-id="teamwork"], [data-page-id="goal"] { --mobile-picture-position: 61% center; }
 }
+/* Enlarge the subjects inside the existing phone frame, not the book layout. */
+@media (max-width: 600px) and (orientation: portrait) {
+  .illustration-leaf img {
+    transform: scale(var(--phone-subject-scale, 1));
+    transform-origin: var(--phone-subject-origin, 50% 55%);
+  }
+  [data-page-id="arrival"] { --phone-subject-scale: 1.16; --phone-subject-origin: 52% 60%; }
+  [data-page-id="ball-toss"] { --phone-subject-scale: 1.12; --phone-subject-origin: 50% 65%; }
+  [data-page-id="teamwork"], [data-page-id="goal"] { --phone-subject-scale: 1.18; --phone-subject-origin: 50% 58%; }
+  .cover-art { transform: scale(1.1); transform-origin: 50% 65%; }
+  .ending-art { transform: scale(1.1); transform-origin: 50% 48%; }
+}
 @media (min-width: 821px) and (max-aspect-ratio: 6/5) {
   .cover-art, .ending-art { object-fit: contain; animation: none; }
   .cover-copy { top: 8%; transform: none; width: 80%; }
