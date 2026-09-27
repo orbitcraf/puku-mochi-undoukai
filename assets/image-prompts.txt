@@ -1,0 +1,33 @@
+Built-in image_gen was used. Reference: ../ぷくもち食べ歩き/assets/food-story-01.png. First accepted cover was edited from that reference; subsequent scenes were edited from the cover, except goal edited from teamwork.
+
+Shared prompt:
+Use case: illustration-story. Create ONE landscape 16:9 full-bleed children's picture book illustration, no collage, no typography, no watermark, no UI. Match exactly the two established otters visible in the conversation reference art: Puku purple-to-pink fluffy fur, white muzzle and tummy, glossy round black eyes and black oval nose, pink cheeks, tiny round dark ears, dark purple paws with pink pads, cheerful open smile; Mochi white fluffy fur with very pale mint/cyan shading, same rounded short plump body, glossy black eyes and nose, rosy cheeks, dark purple ears and paws, gentle smile. Puku ALWAYS wears teal backpack with orange straps; Mochi ALWAYS wears orange backpack with teal trim. No clothes, hats, headbands or medals. Rich colorful painterly furry texture, warm detailed picture-book backgrounds matching food-story reference, not flat vector. Exactly two otters. Characters fully within image; for interior scenes keep both grouped inside central 50% width with 12% top/bottom margin, not close-up. 
+
+01: Cover illustration: sunny Japanese school sports field with colorful triangular bunting. Two otters smiling together at x=65%, y=62%, their complete bodies within x=52..78%, y=38..82%. Quiet sky and grass on left for title overlay. No text.
+
+02: Arrival: at the open entrance of the same sunny sports field with bunting, purple Puku points excitedly toward the field, white mint Mochi smiles beside him. Both full bodies together centrally.
+
+03: Warmup: both otters stand next to each other on the same sports field stretching their two arms overhead. Show all paws, ears and feet, comfortable space above their paws.
+
+04: Foot race: both otters running toward the right along adjacent lanes on the same field, Puku lively and Mochi taking gentle little steps. Both equally visible close together, complete bodies.
+
+05: Ball toss: both otters throw small red and white beanbags into one low basket on a pole. Beanbags airborne, paws never obscure faces. Basket and two full otters centrally grouped.
+
+06: Obstacle race: one very low soft yellow foam hurdle on the track, Puku gently hops over it and Mochi carefully steps over it nearby. Show one moment, both whole bodies including feet.
+
+07: Lunch break: both otters sitting on a picnic mat in the shade of a tree beside the sports field, enjoying open lunchboxes with rice balls. Their usual backpacks still worn and visible. Full heads and bodies.
+
+08: Teamwork giant ball roll: both otters together push one large yellow ball with a broad coral red equatorial stripe along the track to the right. Ball is no taller than their shoulders. Both faces fully visible above and beside ball, paws contact ball. Complete bodies.
+
+09: Finish: both otters happily finish pushing the same large yellow ball with broad coral red equatorial stripe over a white finish line on the same track. Both faces visible, full bodies. No text or numerals on finish markings.
+
+10: Ending: peaceful warm sunset over same now quiet sports field with bunting. Both otters seated together smiling softly at x=65%, y=45%, full bodies within x=52..78%, y=25..62%. Clear darker grass at bottom for ending text and blank left area for desktop text.
+
+All edits specify preserving exact otter identities, proportions, texture, faces and backpack details while changing poses and scene.
+
+Mobile cover edit (reference: sports-story-01.png):
+Recompose this exact illustration for a PORTRAIT 9:16 smartphone book cover. Preserve exact two characters, painterly fluffy style, faces and backpack designs. Full bleed continuous sports field background. UPPER 40% mostly calm blue sky for title and button overlay. Put both otters close together across the CENTRAL 70% width, their full bodies within y=45%..85%, all ears and feet visible, Puku left Mochi right. Cheerful sunny sports field and bunting. No text or UI. Do not crop or enlarge heads to edges. Portrait aspect 9:16.
+
+Mobile ending edit (reference: sports-story-10.png):
+Recompose this exact sunset illustration for a PORTRAIT 9:16 smartphone book ending. Preserve exact two otter identities, painted fluffy texture, faces, teal backpack for purple Puku, orange backpack for pale mint Mochi. Both full bodies sitting closely together in CENTRAL 70% of width and y=23%..55% of image. Their ears and feet fully visible. Warm quiet sunset sports field and bunting, no extra characters. Bottom 40% calm dark grass for ending title and buttons, upper background glowing sunset. Full bleed continuous background, no text or UI.
+
