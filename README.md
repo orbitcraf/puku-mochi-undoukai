@@ -25,7 +25,8 @@ http://127.0.0.1:4173/ をブラウザで開きます。別のポートは環境
 - PC：最大1280×860px、中央配置。本文は絵68％・文章32％。
 - 幅820px以下：上に絵、下に文章。52:48、幅480px以下50:50、低い画面53:47。
 - 文字・余白・ナビ・カードは食べ歩き版を継承。safe-areaと動きを抑える設定に対応。
-- 顔切れを防ぐため、本編は画像全体を基準に1.2倍まで拡大し、背景の外周だけを切り抜きます。枠の比率は固定し、余る部分は紙色に揃えています。
+- スマホ本編は既存3作品と同じobject-fit: coverで画像領域を埋め、画像の拡大transformは使用しません。本文領域・文字・ナビの比率と寸法は維持しています。PCの画像表示は従来のままです。
+- 横に広い玉入れ・大玉転がし・ゴールは、幅600px以下の縦画面で専用構図を使用します。画像を引き伸ばさずに顔・耳の見切れを防ぎます。
 - 表紙と最終ページはスマホ縦構図を追加。長いタイトルが顔を覆わないようPCの文字サイズを調整しました。
 - ぷくは青緑、もちはオレンジのリュックを維持しています。
 
@@ -35,6 +36,7 @@ http://127.0.0.1:4173/ をブラウザで開きます。別のポートは環境
 `sports-cover-mobile.png` と `sports-ending-mobile.png` はスマホ表紙・最終ページ用。
 組み込み image_gen で既存キャラクター画像から編集生成しました。プロンプトセットは `assets/image-prompts.txt`。
 思い出カードは本編画像を再利用します。
+スマホ用の追加3枚はsports-ball-toss-mobile.png、sports-teamwork-mobile.png、sports-goal-mobile.pngです。組み込みimage_genで既存画像を参照して制作し、プロンプトはassets/mobile-scenes-prompts.txtに記録しています。
 
 ## 検査
 
@@ -42,6 +44,7 @@ http://127.0.0.1:4173/ をブラウザで開きます。別のポートは環境
 node scripts/check-static.mjs
 node scripts/check-browser.cjs
 node scripts/inspect-layout.cjs
+node scripts/compare-mobile.cjs
 ```
 
 ブラウザ検査はローカルサーバー起動中に実行します。PlaywrightとMicrosoft Edgeが必要です。
@@ -54,6 +57,7 @@ Playwrightは通常のnode_modules、または使用中のNodeランタイムに
 全ページのPC/スマホ画像と思い出一覧を目視確認。検証画像は `artifacts/` に出力します。
 
 未確認：実機iPhone Safari、ホーム画面追加後の表示、実指でのスワイプ。エミュレーションの検査結果と区別しています。
+シリーズ比較スクリプトは親フォルダの山・海・食べ歩きを読み取り専用で開きます。320・375・390・430px幅で本体幅、ナビ幅、見出しサイズ、ボタン高、表示倍率が一致することを検査します。PCの比較基準がartifacts/before-comparison.jsonにある場合はPC寸法が変わらないことも確認します。
 
 ## GitHub Pages
 

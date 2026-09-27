@@ -23,6 +23,14 @@ const base = process.env.TEST_URL || 'http://127.0.0.1:4173/';
         const text=p.querySelector('.story-leaf');
         const issues=[];
         if(document.documentElement.scrollWidth>innerWidth) issues.push('horizontal overflow');
+        if(innerWidth<=480){
+          for(const selector of ['.book-stage','.storybook','.book-viewport','.book-controls']) {
+            const box=document.querySelector(selector).getBoundingClientRect();
+            if(Math.abs(box.width-innerWidth)>1 || Math.abs(box.left)>1) issues.push('mobile width '+selector);
+          }
+          const image=p.querySelector('.illustration-leaf img');
+          if(image && (getComputedStyle(image).objectFit!=='cover' || getComputedStyle(image).transform!=='none')) issues.push('mobile image scale');
+        }
         if(text && [...text.children].some(el=>el.scrollWidth>el.clientWidth+1)) issues.push('text horizontal overflow');
         if(text && getComputedStyle(text).overflowY!=='auto'){
           const t=text.getBoundingClientRect();
