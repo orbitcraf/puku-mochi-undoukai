@@ -429,8 +429,8 @@ img { display: block; max-width: 100%; -webkit-user-drag: none; user-select: non
 }
 /* Enlarge the subjects inside the existing phone frame, not the book layout. */
 @media (max-width: 600px) and (orientation: portrait) {
-  /* Preserve the series' bottom 7% hint band while zooming the cover subjects. */
-  .book-page--cover > picture { position: absolute; inset: 0; clip-path: inset(0 0 7%); }
+  /* Preserve the series' top and bottom 7% bands while zooming the cover subjects. */
+  .book-page--cover > picture { position: absolute; inset: 0; clip-path: inset(7% 0); }
   .illustration-leaf img {
     transform: scale(var(--phone-subject-scale, 1));
     transform-origin: var(--phone-subject-origin, 50% 55%);
